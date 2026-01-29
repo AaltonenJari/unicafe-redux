@@ -1,22 +1,9 @@
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux'
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux'
-
-const counterReducer = (state = 0, action) => {
-  switch (action.type) {
-    case 'INCREMENT':
-      return state + 1
-    case 'DECREMENT':
-      return state - 1
-    case 'ZERO':
-      return 0
-    default:
-      return state
-  }
-}
+import counterReducer from './reducers/counterReducer'
 
 const store = createStore(counterReducer)
 
